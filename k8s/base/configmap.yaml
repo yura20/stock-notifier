@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: stock-notifier-config
+  namespace: stocks
+data:
+  TOPIC: "stock_alerts"
+  STOCK_CODE: "1rTPUST"
+  VARIATION_STARTWITH: "-" 

@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: stock-notifier-cron
+  namespace: stocks
+spec:
+  schedule: "0 9-17 * * 1-5"
+  timeZone: "Europe/Paris"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: stock-notifier
+              image: ghcr.io/yura20/stock-notifier:latest
+              imagePullPolicy: Always
+              envFrom:
+                - configMapRef:
+                    name: stock-notifier-config
+          restartPolicy: OnFailure
