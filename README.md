@@ -6,7 +6,7 @@ This project sends **stock price variation alerts** using a Python script runnin
 
 - Configurable **STOCK_CODE** and **TOPIC** via environment variables.
 - Optional **VARIATION_STARTWITH**: send alerts only when variation starts with a specific character (e.g., "-", "+").
-- Runs on **weekdays, every hour from 9 AM to 5 PM by Paris Time**.
+- Runs on **weekdays, every 30 mins from 9 AM to 5:30 PM by Paris Time**.
 - Fully containerized using Docker.
 - Deployable in **Kubernetes** with ConfigMaps for environment configuration.
 
