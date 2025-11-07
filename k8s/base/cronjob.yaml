@@ -4,7 +4,7 @@ metadata:
   name: stock-notifier-cron
   namespace: stocks
 spec:
-  schedule: "0 9-17 * * 1-5"
+  schedule: "*/30 9-17 * * 1-5"
   timeZone: "Europe/Paris"
   jobTemplate:
     spec:
